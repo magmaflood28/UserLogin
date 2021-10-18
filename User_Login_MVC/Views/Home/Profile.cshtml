@@ -27,7 +27,11 @@
             <a href="javascript:;" onclick="document.forms[0].submit();">Logout</a>
         }
          <div>
-            @grid.GetHtml()
+            @grid.GetHtml(columns: grid.Columns(
+                grid.Column("Name"),
+                grid.Column("Position"),
+                grid.Column("YearOfEmployment")
+    ))
         </div>
     </div>
 </body>
